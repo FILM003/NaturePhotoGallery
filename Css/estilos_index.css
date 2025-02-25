@@ -1,0 +1,205 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* Variables CSS */
+:root {
+    --font: "DM Sans", sans-serif;
+    --salmon: #ffd9c3;
+    --black: #171212;
+    --white: #efebeb;
+    --blue: #007bff;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--salmon);
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 11.5px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+    
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    padding-right: 15px;
+    
+}
+
+.nav-pills .nav-link {
+    font-size: 16px;
+    font-weight: 600; /* หรือใช้ font-weight: 700; */
+    text-decoration: none; /* ลบเส้นใต้ */
+    color: #000000;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+       
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #0056b3;
+    color: white;
+}
+
+.nav-pills .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--blue);
+    left: 0;
+    bottom: -5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    
+}
+
+.nav-pills .nav-link:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+    
+}
+ 
+ .nav-pills .nav-link:hover::after {
+     opacity: 1;
+     transform: scaleX(1);
+     
+ }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--salmon);
+}
+
+/* Main */
+main {
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Card */ 
+.card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    box-shadow: 1px 1px 11px -3px rgba(0, 0, 0, 0.73);
+}
+
+.card__img-box {
+    position: relative;
+    width: 300px;
+    height: 390px;
+}
+
+.card__img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.card__img-box video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 10;
+}
+
+.card__img-box p {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 160px;
+    padding: 40px 20px;
+    color: var(--white);
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.card__img-box p::before {
+    content: "";
+    width: 20px;
+    height: 4px;
+    border-radius: 25px;
+    background-color: var(--white);
+    bottom: 0;
+    left: 45%;
+    position: absolute;
+    z-index: 1;
+}
+
+.card__text-box {
+    width: 100%;
+    height: 60px;
+    background-color: var(--white);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__text-box h3 {
+    color: var(--black);
+    font-size: 1.1em;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+}

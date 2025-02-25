@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean | Hawaii</title>
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="Css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <button class="back-button" onclick="goBack()">Back</button>
+
+  <!--
+      - article card
+    -->
+
+  <article class="article-card">
+
+    <div class="img-box">
+      <img src="Ocean/img/11_Hawaii.jpg" alt="" class="article-banner">
+    </div>
+
+
+    <div class="article-content">
+
+      <a href="#">
+        <h3 class="article-title">Hawaii</h3>
+      </a>
+
+      <p class="article-text">Hawaii is often referred to as "The Aloha State" or "The Paradise of the Pacific." Hawaii is a state in the United States located in the Pacific Ocean, with stunning landscapes including white sandy beaches, active volcanoes, tropical forests, and crystal-clear waters. "The Aloha State" comes from the word "Aloha," which means love, peace, and hospitality, and is an important concept in Hawaiian culture. Hawaii is considered one of the most beautiful paradises in the Pacific, full of diverse nature and unique culture.</p>
+
+      <div class="acticle-content-footer">
+
+        <div class="author">
+          <img src="Ocean/img/Avatar/avater11-jessica.jpg" alt="" class="author-avater">
+
+          <div class="author-info">
+            <a href="#">
+              <h4 class="author-name">Jess Loiterton</h4>
+            </a>
+            <div class="publish-date">26 Nov 2018</div>
+          </div>
+        </div>
+
+
+        <div class="share">
+
+          <button class="share-button">
+            <ion-icon name="arrow-redo"></ion-icon>
+          </button>
+
+          <div class="share-option">
+            <span>Share</span>
+
+            <a href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="#">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a href="#">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+
+
+
+  <!--
+    - internal script
+  -->
+  <script>
+
+    const shareOption = document.querySelector('.share-option');
+
+    document.querySelector('.share-button').addEventListener('click', function () {
+      this.classList.toggle('active');
+      shareOption.classList.toggle('active');
+    });
+
+  </script>
+
+  <!--
+    - ionicon link
+  -->
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

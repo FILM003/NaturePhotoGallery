@@ -1,0 +1,149 @@
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+    /* Variables CSS */
+    :root {
+        --font: "DM Sans", sans-serif;
+        --salmon: #ffd9c3;
+        --black: #171212;
+        --white: #efebeb;
+        --blue: #007bff;
+    }
+
+    /* Reset CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: var(--font);
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--salmon);
+    }
+
+    /* Header */
+    header {
+        width: 100%;
+        background-color: #f8f9fa;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        list-style: none;
+        
+    }
+
+    .nav-pills .nav-link {
+        font-size: 16px;
+        font-weight: 600; /* หรือใช้ font-weight: 700; */
+        text-decoration: none; /* ลบเส้นใต้ */
+        color: #000000;
+        padding: 10px 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        
+    }
+
+    .nav-pills .nav-link:hover {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .nav-pills .nav-link.active {
+        background-color: #0056b3;
+        color: white;
+    }
+
+    .nav-pills .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: var(--blue);
+        left: 0;
+        bottom: -5px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transform: scaleX(0);
+        
+    }
+
+    .nav-pills .nav-link:hover::after {
+        opacity: 1;
+        transform: scaleX(1);
+        
+    }
+    
+    .nav-pills .nav-link:hover::after {
+        opacity: 1;
+        transform: scaleX(1);
+        
+    }
+
+/* ซ่อนสัญลักษณ์ Zoom ที่ปรากฏโดยใช้ Materialize */
+.materialboxed {
+     cursor: pointer;
+ }
+ 
+ /* เมื่อเมาส์ชี้ที่รูปภาพจะทำให้ไม่มีสัญลักษณ์ zoom */
+ .material-placeholder img:hover {
+     transform: scale(1.01); /* ขยายรูปเล็กน้อยเมื่อชี้ */
+ }
+ 
+ .material-placeholder img {
+     transition: transform 0.3s ease-in-out;
+ }
+ 
+ /* เมื่อเมาส์ชี้ที่รูปภาพ */
+ .material-placeholder img:hover {
+     transform: scale(1.01); /* ขยายรูปเล็กน้อยเมื่อเมาส์ชี้ */
+ }
+ 
+ 
+ 
+
+.titulo {
+     font-size: 55px;
+     text-transform: uppercase;
+     letter-spacing: 7px;
+}
+
+.galeria img {
+     box-shadow: 0 8px 10px -4px rgba(0,0,0,.6);
+     border-radius: 0;
+}
+
+
+.galeria .col {
+     margin-bottom: 19px;
+}
+
+@media screen and (max-width: 600px){
+     .materialbox-caption {
+          width: 90%;
+     }
+}
+
+@media screen and (max-width: 992px){
+     .materialbox-caption {
+          width: 70%;
+     }
+}
